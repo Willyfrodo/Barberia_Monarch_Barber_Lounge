@@ -1,8 +1,8 @@
-/* ==========================================================================
-     ESTILOS MAESTROS - IDENTIDAD VISUAL MONARCH LOUNGE
-   ========================================================================== */
+/* 
+ESTILOS
+*/
 
-/* Colores Base de Respaldo */
+/* Colores de fondo de respaldo */
 .bg-dark {
     background-color: #121212 !important;
 }
@@ -10,7 +10,7 @@
     color: #C8A96B !important;
 }
 
-/* Header links corrección */
+/* Estilos navegación del Header */
 #header .nav-link {
     color: #ffffff !important;
     font-weight: 500;
@@ -22,27 +22,28 @@
     color: #C8A96B !important;
 }
 
-/* Botones Premium Oro */
+/* Diseño    botones dorados
+ */
 .custom-btn-gold {
     background-color: #C8A96B !important;
     border-color: #C8A96B !important;
     color: #0d0d0d !important;
-    border-radius: 0px !important;
+    border-radius: 0px !important; /* Esquinas totalmente rectas para verse más minimalista */
     letter-spacing: 1.5px;
     transition: all 0.3s ease;
 }
 .custom-btn-gold:hover {
     background-color: #bfa060 !important;
     border-color: #bfa060 !important;
-    transform: translateY(-2px);
+    transform: translateY(-2px); /* El botón da un brinquito sutil hacia arriba al seleccionarlo */
 }
 
-/* Tarjetas de Servicios Estilo Premium */
-.custom-card-premium {
-    background-color: #1a1a1a !important;
-    border: 1px solid rgba(200, 169, 107, 0.15) !important;
-    border-radius: 4px;
-    transition: all 0.3s ease;
+            /* Estilos de las tarjetas de la sección servicios */
+            .custom-card-premium {
+                          background-color: #1a1a1a !important;
+                border: 1px solid rgba(200, 169, 107, 0.15) !important;
+                border-radius: 4px;
+                transition: all 0.3s ease;
 }
 .custom-card-premium:hover {
     border-color: #C8A96B !important;
@@ -55,10 +56,10 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    border-radius: 50%;
+    border-radius: 50%; /* Hace que el fondo del icono sea un círculo perfecto */
 }
 
-/* Marcos de Imagen y Contenedores Vacíos de Respaldo (Si la ruta falla) */
+/* Marcos con bordes dorados */
 .custom-image-frame {
     border: 1px solid #C8A96B;
     padding: 6px;
@@ -69,6 +70,8 @@
     align-items: center;
     justify-content: center;
 }
+
+/* Mensajes alternativos en CSS por si alguna imagen carga */
 .image-fallback::after, .image-fallback-2::after {
     content: "MANIFIESTO LOUNGE";
     color: rgba(255, 255, 255, 0.2);
@@ -80,13 +83,12 @@
     content: "PREMIUM EXPERIENCE";
 }
 
-/* Líneas Guía del Menú de Tarifas */
 .custom-menu-line {
     border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
     margin-bottom: 5px;
 }
 
-/* Formulario de Autenticación de Alta Gama */
+/* Estilos de los inputs de texto para las cajas de login y registro */
 .custom-form-input {
     background-color: #1a1a1a !important;
     border: 1px solid rgba(255, 255, 255, 0.1) !important;
@@ -102,9 +104,82 @@
     color: rgba(255, 255, 255, 0.4) !important;
 }
 
-/* Divisor Vertical para Escritorio */
 @media (min-width: 768px) {
     .custom-auth-divider {
         border-right: 1px solid rgba(200, 169, 107, 0.15);
+    }
+}
+
+
+/* Contenedor que usa Flexbox para alinear la imagen y el texto de lado a lado */
+.manifesto-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 40px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Controla el espacio del contenedor de la imagen (ocupa la mitad, el 50%) */
+.manifesto-media {
+    width: 50%;
+    border: 1px solid #C8A96B;
+    aspect-ratio: 16 / 9; /* Mantiene la proporción de aspecto panorámico para que no se deforme */
+    overflow: hidden;
+    background-color: #1a1a1a;
+}
+
+/* Hace que la etiqueta <img> llene por completo su contenedor sin distorsionar la foto */
+.manifesto-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Controla el espacio del bloque de texto */
+.manifesto-text {
+    width: 50%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.manifesto-text h2, .manifesto-text h3 {
+    color: #C8A96B !important;
+    font-family: 'Cinzel', serif !important;
+    margin-top: 0;
+}
+
+.manifesto-text p {
+    color: #a0a0a0 !important;
+    line-height: 1.6; /* Añade interlineado para que el párrafo sea cómodo de leer */
+}
+
+/* lista ordenada de las tarifas de la barbería */
+.price-row {
+    display: flex;
+    justify-content: space-between; /* Envía el nombre del servicio a la izquierda y el precio a la derecha */
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
+    padding: 12px 0;
+    color: #ffffff;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.price-value {
+    color: #C8A96B !important;
+}
+
+/* esto es para que los tamaños se ajusten lo programe con ayuda de ia por que no lo entiendo  */
+
+/* Media Query: Si la pantalla mide menos de 768px (un celular), cambia la disposición */
+@media (max-width: 768px) {
+    .manifesto-container {
+        flex-direction: column !important; /* En celulares, la imagen se pone arriba y el texto abajo */
+        text-align: center;
+    }
+    .manifesto-media, .manifesto-text {
+        width: 100% !important; /* Pasan a usar el 100% del ancho de la pantalla del celular */
     }
 }
