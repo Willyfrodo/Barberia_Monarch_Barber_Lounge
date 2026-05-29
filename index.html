@@ -5,16 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Monarch Barber Lounge - Club Miembros</title>
     
-    <!-- Fuentes Elegantes Google Fonts -->
+    /*fuentes de google fonts*/
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     
     <!-- FontAwesome para asegurar que los iconos carguen siempre -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
-        /* ==========================================================================
-           REDISEÑO DE IDENTIDAD VISUAL: CRÍTICO Y DE ALTA LEGIBILIDAD
-           ========================================================================== */
+        /* REDISEÑO DE IDENTIDAD VISUAL*/
         
         :root {
             --bg-principal: #0a0a0a;
@@ -25,7 +23,6 @@
             --texto-mutado: #a0a0a0;
         }
 
-        /* Reseteo para evitar conflictos con Porto */
         body {
             background-color: var(--bg-principal) !important;
             color: var(--texto-claro) !important;
@@ -35,7 +32,6 @@
             overflow-x: hidden;
         }
 
-        /* Forzar visibilidad de textos y encabezados */
         h1, h2, h3, h4 {
             color: var(--texto-claro) !important;
             font-family: 'Cinzel', serif !important;
@@ -365,41 +361,48 @@
         <!-- 3. SECCIÓN DE TEXTOS E IMÁGENES -->
         <section id="manifesto-section" class="seccion-bloques">
             
-            <!-- Bloque 1: Imagen Izquierda, Texto Derecho -->
-            <div class="bloque-row">
-                <div class="bloque-imagen">
-                    <img src="img/demos/barber/about-us.jpg" alt="Manifiesto" onerror="this.style.display='none'; this.parentNode.innerHTML='EL MANIFIESTO';">
-                </div>
-                <div class="bloque-texto">
-                    <h3 style="color: var(--oro-premium) !important; margin-top: 0;">EL MANIFIESTO EJECUTIVO</h3>
-                    <p style="line-height: 1.6;">
-                        No esculpimos simple cabello; consolidamos de forma impecable la proyección visual del ejecutivo de alto rendimiento. Un entorno estrictamente minimalista diseñado con precisión para mitigar el desgaste de la rutina diaria bajo los más altos estándares internacionales de la barbería clásica de lujo.
-                    </p>
-                </div>
-            </div>
+           <!-- CONTENEDOR PRINCIPAL DEL MANIFIESTO -->
+<div style="display: flex; align-items: center; gap: 20px; margin-bottom: 40px;">
+    
+    <!-- Cuadrícula Izquierda (Imagen) -->
+    <div style="width: 50%; border: 1px solid #c5a880; aspect-ratio: 16 / 9; overflow: hidden;">
+        <img src="img/1manifiesto altaR.png" alt="El Manifiesto Ejecutivo" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+    </div>
+    
+    <!-- Bloque de Texto Derecho -->
+    <div style="width: 50%;">
+        <h2 style="color: #c5a880; font-family: sans-serif; margin-top: 0;">EL MANIFIESTO EJECUTIVO</h2>
+        <p style="color: #999; font-family: sans-serif; line-height: 1.6;">
+            No esculpimos simple cabello; consolidamos de forma impecable la proyección visual del ejecutivo de alto rendimiento. Un entorno estrictamente minimalista diseñado con precisión para mitigar el desgaste de la rutina diaria bajo los más altos estándares internacionales de la barbería clásica de lujo.
+        </p>
+    </div>
 
-            <!-- Bloque 2: Tarifas Izquierda, Imagen Derecha -->
-            <div class="bloque-row">
-                <div class="bloque-texto">
-                    <h3 style="color: var(--oro-premium) !important; margin-top: 0; margin-bottom: 25px;">INVERSIONES DE SELECCIÓN</h3>
-                    
-                    <div class="linea-precio">
-                        <h4>CORTE & PERFILADO SIGNATURE</h4>
-                        <div class="puntos-guia"></div>
-                        <span class="valor-precio">$45.00</span>
-                    </div>
-                    
-                    <div class="linea-precio">
-                        <h4>RITUAL DE BARBA IMPERIAL</h4>
-                        <div class="puntos-guia"></div>
-                        <span class="valor-precio">$35.00</span>
-                    </div>
-                </div>
-                <div class="bloque-imagen">
-                    <img src="img/demos/barber/portfolio/portfolio-1.jpg" alt="Tarifas" onerror="this.style.display='none'; this.parentNode.innerHTML='PREMIUM EXPERIENCE';">
-                </div>
-            </div>
-        </section>
+</div>
+
+            <!-- CONTENEDOR PRINCIPAL DE PRECIOS Y EXPERIENCIA -->
+<div style="display: flex; align-items: center; gap: 20px;">
+    
+    <!-- Bloque de Texto Izquierdo (Menú de Precios) -->
+    <div style="width: 50%;">
+        <h3 style="color: #c5a880; font-family: sans-serif; letter-spacing: 1px; margin-bottom: 20px;">INVERSIONES DE SELECCIÓN</h3>
+        
+        <div style="display: flex; justify-content: space-between; border-bottom: 1px dotted #444; padding: 8px 0; color: #fff; font-family: sans-serif; font-weight: bold;">
+            <span>CORTE & PERFILADO SIGNATURE</span>
+            <span style="color: #c5a880;">$45.00</span>
+        </div>
+        
+        <div style="display: flex; justify-content: space-between; border-bottom: 1px dotted #444; padding: 8px 0; color: #fff; font-family: sans-serif; font-weight: bold;">
+            <span>RITUAL DE BARBA IMPERIAL</span>
+            <span style="color: #c5a880;">$35.00</span>
+        </div>
+    </div>
+    
+    <!-- Cuadrícula Derecha (Imagen Premium Experience) -->
+    <div style="width: 50%; border: 1px solid #c5a880; aspect-ratio: 16 / 9; overflow: hidden;">
+        <img src="img/2premium altaR.png" alt="Premium Experience" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+    </div>
+
+</div>
 
         <!-- 4. REGISTRO E INICIO DE SESIÓN -->
         <section id="auth-section" class="seccion-oscura" style="border-top: 1px solid rgba(200, 169, 107, 0.1);">
