@@ -1,0 +1,110 @@
+/* ==========================================================================
+     ESTILOS MAESTROS - IDENTIDAD VISUAL MONARCH LOUNGE
+   ========================================================================== */
+
+/* Colores Base de Respaldo */
+.bg-dark {
+    background-color: #121212 !important;
+}
+.text-color-primary {
+    color: #C8A96B !important;
+}
+
+/* Header links corrección */
+#header .nav-link {
+    color: #ffffff !important;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 11px !important;
+}
+#header .nav-link.active {
+    color: #C8A96B !important;
+}
+
+/* Botones Premium Oro */
+.custom-btn-gold {
+    background-color: #C8A96B !important;
+    border-color: #C8A96B !important;
+    color: #0d0d0d !important;
+    border-radius: 0px !important;
+    letter-spacing: 1.5px;
+    transition: all 0.3s ease;
+}
+.custom-btn-gold:hover {
+    background-color: #bfa060 !important;
+    border-color: #bfa060 !important;
+    transform: translateY(-2px);
+}
+
+/* Tarjetas de Servicios Estilo Premium */
+.custom-card-premium {
+    background-color: #1a1a1a !important;
+    border: 1px solid rgba(200, 169, 107, 0.15) !important;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+.custom-card-premium:hover {
+    border-color: #C8A96B !important;
+    transform: translateY(-5px);
+}
+.icon-wrapper {
+    background: rgba(200, 169, 107, 0.1);
+    width: 60px;
+    height: 60px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+/* Marcos de Imagen y Contenedores Vacíos de Respaldo (Si la ruta falla) */
+.custom-image-frame {
+    border: 1px solid #C8A96B;
+    padding: 6px;
+    background-color: #1a1a1a;
+    position: relative;
+    min-height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.image-fallback::after, .image-fallback-2::after {
+    content: "MANIFIESTO LOUNGE";
+    color: rgba(255, 255, 255, 0.2);
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-family: 'Cinzel', serif;
+}
+.image-fallback-2::after {
+    content: "PREMIUM EXPERIENCE";
+}
+
+/* Líneas Guía del Menú de Tarifas */
+.custom-menu-line {
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
+    margin-bottom: 5px;
+}
+
+/* Formulario de Autenticación de Alta Gama */
+.custom-form-input {
+    background-color: #1a1a1a !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: #ffffff !important;
+    border-radius: 0px !important;
+}
+.custom-form-input:focus {
+    border-color: #C8A96B !important;
+    box-shadow: none !important;
+    background-color: #222222 !important;
+}
+.custom-form-input::placeholder {
+    color: rgba(255, 255, 255, 0.4) !important;
+}
+
+/* Divisor Vertical para Escritorio */
+@media (min-width: 768px) {
+    .custom-auth-divider {
+        border-right: 1px solid rgba(200, 169, 107, 0.15);
+    }
+}
